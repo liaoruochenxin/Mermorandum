@@ -1,0 +1,49 @@
+# Dependencies
+node_modules/
+
+# Editor directories and files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+
+# WeChat Mini Program specific
+miniprogram_npm/
+pack/
+*.log
+project.private.config.json
+
+# Build outputs
+dist/
+build/
+
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# OS generated files
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Test coverage
+coverage/
+
+# Package manager lockfiles (可选，根据团队需求)
+# package-lock.json
+# yarn.lock
