@@ -1,0 +1,91 @@
+.login-container {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, #fff 0%, #ffd89b 50%, #ffa500 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-content {
+  width: 100%;
+  padding: 60rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Logo区域 */
+.logo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 120rpx;
+}
+
+.logo {
+  width: 160rpx;
+  height: 160rpx;
+  margin-bottom: 40rpx;
+}
+
+.app-name {
+  font-size: 48rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 16rpx;
+}
+
+.app-slogan {
+  font-size: 28rpx;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+/* 登录按钮区域 */
+.login-section {
+  width: 100%;
+  margin-bottom: 60rpx;
+}
+
+.login-btn {
+  width: 100%;
+  height: 96rpx;
+  background: linear-gradient(135deg, #ff9a56 0%, #ff6b35 100%);
+  color: #fff;
+  font-size: 32rpx;
+  font-weight: 600;
+  border-radius: 48rpx;
+  border: none;
+  box-shadow: 0 8rpx 24rpx rgba(255, 107, 53, 0.4);
+  transition: all 0.3s;
+}
+
+.login-btn:active {
+  transform: scale(0.98);
+  box-shadow: 0 4rpx 12rpx rgba(255, 107, 53, 0.3);
+}
+
+.login-btn[disabled] {
+  opacity: 0.6;
+}
+
+/* 协议区域 */
+.agreement-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20rpx;
+}
+
+.agreement-text {
+  font-size: 24rpx;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.agreement-link {
+  font-size: 24rpx;
+  color: #ff6b35;
+  text-decoration: underline;
+  margin: 0 4rpx;
+}

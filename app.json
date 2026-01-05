@@ -1,6 +1,10 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/login/login",
+    "pages/index/index",
+    "pages/memo-add/memo-add",
+    "pages/memo-detail/memo-detail",
+    "pages/memo-edit/memo-edit"
   ],
   "window": {
     "navigationBarTextStyle": "black",

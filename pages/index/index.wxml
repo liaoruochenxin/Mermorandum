@@ -1,7 +1,33 @@
-<!--index.wxml-->
-<navigation-bar title="Weixin" back="{{false}}" color="black" background="#FFF"></navigation-bar>
-<scroll-view class="scrollarea" scroll-y type="list">
-  <view class="container">
-    Weixin
+<navigation-bar title="备忘录" back="{{false}}" color="#333" background="#FFF"></navigation-bar>
+
+<view class="page">
+  <!-- 空状态 -->
+  <view class="empty-state" wx:if="{{!memos || memos.length === 0}}">
+    <view class="empty-icon">📝</view>
+    <text class="empty-title">还没有备忘录</text>
+    <text class="empty-desc">点击下方按钮创建你的第一个备忘录</text>
+    <button class="empty-create-btn" bindtap="onCreateMemo">
+      <text class="btn-icon">+</text>
+      <text>创建备忘录</text>
+    </button>
   </view>
-</scroll-view>
+
+  <!-- 备忘录列表 -->
+  <scroll-view class="memo-list" scroll-y wx:else>
+    <view class="memo-item" wx:for="{{memos}}" wx:key="id" bindtap="onViewMemo" data-id="{{item.id}}">
+      <view class="memo-header">
+        <text class="memo-title">{{item.title}}</text>
+        <text class="memo-date">{{item.date}}</text>
+      </view>
+      <text class="memo-content">{{item.content}}</text>
+      <view class="memo-tags" wx:if="{{item.tags && item.tags.length > 0}}">
+        <text class="tag" wx:for="{{item.tags}}" wx:key="*this" wx:for-item="tag">{{tag}}</text>
+      </view>
+    </view>
+  </scroll-view>
+
+  <!-- 浮动添加按钮 -->
+  <view class="fab" bindtap="onCreateMemo" wx:if="{{memos && memos.length > 0}}">
+    <text class="fab-icon">+</text>
+  </view>
+</view>

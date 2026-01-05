@@ -1,0 +1,35 @@
+<navigation-bar title="备忘录详情" back="{{true}}" color="#333" background="#FFF"></navigation-bar>
+
+<view class="page" style="background: {{memo.color || '#f5f5f5'}};">
+  <view class="detail-container">
+    <!-- 标题 -->
+    <view class="title-section">
+      <text class="title">{{memo.title}}</text>
+      <text class="date">{{memo.date}}</text>
+    </view>
+
+    <!-- 内容 -->
+    <view class="content-section">
+      <text class="content">{{memo.content}}</text>
+    </view>
+
+    <!-- 标签 -->
+    <view class="tags-section" wx:if="{{memo.tags && memo.tags.length > 0}}">
+      <view class="tags-list">
+        <text class="tag" wx:for="{{memo.tags}}" wx:key="*this">{{item}}</text>
+      </view>
+    </view>
+
+    <!-- 操作按钮 -->
+    <view class="action-section">
+      <button class="action-btn edit-btn" bindtap="onEdit">
+        <text class="btn-icon">✎</text>
+        <text>编辑</text>
+      </button>
+      <button class="action-btn delete-btn" bindtap="onDelete">
+        <text class="btn-icon">🗑</text>
+        <text>删除</text>
+      </button>
+    </view>
+  </view>
+</view>

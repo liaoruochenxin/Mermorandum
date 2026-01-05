@@ -1,0 +1,30 @@
+<view class="login-container">
+  <view class="login-content">
+    <!-- Logo区域 -->
+    <view class="logo-section">
+      <image class="logo" src="/images/logo.png" mode="aspectFit"></image>
+      <text class="app-name">备忘录</text>
+      <text class="app-slogan">记录生活，珍藏点滴</text>
+    </view>
+
+    <!-- 登录按钮区域 -->
+    <view class="login-section">
+      <button
+        class="login-btn"
+        open-type="getUserInfo"
+        bindgetuserinfo="onGetUserInfo"
+        loading="{{loading}}"
+      >
+        微信一键登录
+      </button>
+    </view>
+
+    <!-- 协议提示 -->
+    <view class="agreement-section">
+      <text class="agreement-text">登录即表示同意</text>
+      <text class="agreement-link" bindtap="onAgreement">《用户协议》</text>
+      <text class="agreement-text">和</text>
+      <text class="agreement-link" bindtap="onPrivacy">《隐私政策》</text>
+    </view>
+  </view>
+</view>
